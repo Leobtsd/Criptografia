@@ -8,7 +8,16 @@ function criptografar($frase) {
     $frase = str_split($frase, 3);
 
     // Loop pelas partes da frase
-   foreach ($frase as &$parte) {
+    foreach ($frase as &$parte) {
+        // Verifica o tamanho da parte
+        $tamanho = strlen($parte);
+
+        if ($tamanho == 1) {
+            $parte .= "##"; // Adiciona dois espaços vazios para completar 3 caracteres
+        } else if ($tamanho == 2) {
+            $parte .= "#"; // Adiciona um espaço vazio para completar 3 caracteres
+        }
+
         // Gera uma letra aleatória de 'b' a 'e'
         $letra_aleatoria = chr(rand(98, 101));
         // Adiciona a letra aleatória ao final de cada parte da frase
@@ -29,17 +38,12 @@ function criptografar($frase) {
             case 'e':
                 $parte .= chr(rand(97, 122)) . chr(rand(97, 122)) . chr(rand(97, 122)) . chr(rand(97, 122));
                 break;
-           
         }
     }
 
-
     $frase = implode("", $frase);
-    echo($frase);
-    
-    //var_dump($frase);
+    echo $frase;
 }
-
 
 criptografar("ola meus amigos e amigas bom di");
 
@@ -73,8 +77,8 @@ function descriptografar($frase_criptografada) {
     echo $frase_descriptografada;
 }
 
+descriptografar("olaerook#mebhus#bcamidhvpgoscvg#e#dceeamiclzgasckv#boczrm#dbei##bz");
 
-descriptografar("oladcxz#medtfwus#bjamieqecbgosdkhz#e#cehamibcgasdqrm#bobnm#ddjwdielghj")
 
 
 
