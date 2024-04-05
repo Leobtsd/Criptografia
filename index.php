@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +7,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+    <h1 class="titulo">Criptografia</h1>
+    </header>
 <form method="post">
   <textarea name="meuTextoCriptografar"></textarea>
-  <button type="submit" name="submitCriptografar">Criptografar</button>
+  <button class="button-56" type="submit" name="submitCriptografar">Criptografar</button>
 </form>
 
 <form method="post">
   <textarea name="meuTextoDescriptografar"></textarea>
-  <button type="submit" name="submitDescriptografar">Descriptografar</button>
+  <button class="button-56" type="submit" name="submitDescriptografar">Descriptografar</button>
 </form>
 
 
