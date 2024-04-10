@@ -1,2 +1,2 @@
 # Criptografia
-Atividade acadêmina - Discicplina de Segurança 
+Atividade acadêmina - Disciplina de Segurança 
